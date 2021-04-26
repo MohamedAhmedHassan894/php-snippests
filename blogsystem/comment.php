@@ -13,10 +13,17 @@ class Comment{
     }
 
     public function setBody($body){
-        $this->$body=$body;
+        $this->body=$body;
     }
 
     public function getBody(){
-        return $this->$body;
+        return $this->body;
+    }
+
+    public function getUser(){
+        return $this->user;
+    }
+    public function getDate(){
+        return $this->createdAt;
     }
 }

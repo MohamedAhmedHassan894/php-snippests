@@ -7,16 +7,22 @@ class Post{
     //we can access user class here , as it's in the same level of this file , so no problem if we didn't add require_once "user.php" , but this case with classes only , not with files  
     function __construct(User $user) //by default it's public
     {
-        $this->$user=$user;
-        $this->$createdAt=time();
+        $this->user=$user;
+        $this->createdAt=date("Y/M/D");
     }
 
     public function setBody($body){
-        $this->$body=$body;
+        $this->body=$body;
     }
 
     public function getBody(){
-        return $this->$body;
+        return $this->body;
     }
 
+    public function getUser(){
+        return $this->user;
+    }
+    public function getDate(){
+        return $this->createdAt;
+    }
 }

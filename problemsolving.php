@@ -6,6 +6,7 @@
 
 countOnes(12);
 function countOnes($i) {
+			
     echo (array_sum(str_split(decbin($i))));
 }
 
